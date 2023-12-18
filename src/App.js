@@ -9,6 +9,22 @@ function App() {
     setActiveButton(button);
   };
 
+  const handlePrintClick = (imageUrl) => {
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title>Print Image</title>
+        </head>
+        <body>
+          <img src="${imageUrl}" alt="Printed Image" style="max-width: 100%; height: auto;">
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
+    printWindow.print();
+  };
+
   const handleDownloadClick = (imageUrl) => {
     const link = document.createElement('a');
     link.href = imageUrl;
@@ -37,7 +53,9 @@ function App() {
                 >
                   <i className="material-icons">cloud_download</i>
                 </button>
-                <button className="action-button" title="Print">
+                <button className="action-button" title="Print"
+                onClick={handlePrintClick}
+                >
                   <i className="material-icons">print</i>
                 </button>
               </div>
@@ -259,6 +277,10 @@ function App() {
       </div>
 
       <div className="grid-container">{renderGridContent()}</div>
+
+      <footer>
+      <p>&copy; 2023 Njenga Karori All rights reserved.</p>
+    </footer>
     </div>
   );
 }

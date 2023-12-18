@@ -59,6 +59,7 @@ body {
   grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
   gap: 20px; /* Spacing between grid items */
   margin-top: 20px;
+  margin-bottom: 200px;
 }
 
 .grid-item {
@@ -101,6 +102,22 @@ body {
   left: 10px;
   color: #333; /* Adjust text color as needed */
 }
+
+footer {
+  background-color: #f0f0f0;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 14px;
+  padding-left: 10px;
+  background: inherit;
+  color: black;
+}
 /* Media Query for tablets and smaller screens */
 @media (max-width: 768px) {
   .tab-container {
@@ -109,5 +126,19 @@ body {
 
   .tab-button {
     padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Media Query for Phones */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
