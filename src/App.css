@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+/* src/App.css */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2; /* Light grey background color */
+  font-family: 'Arial', sans-serif; /* Use a fallback font */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 50px;
+  background-color: inherit; /* Inherit background color from the body */
+  border-radius: 8px;
+}
+
+.tab-container {
+  width: 60%; /* Set the width to 60% */
+  height: 80px; /* Set the height to 80px */
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 15px; /* Set the border radius to 15 */
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px; /* Increase the border radius to 15 */
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.tab-button i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.tab-button.active {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+  gap: 20px; /* Spacing between grid items */
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.grid-item {
+  position: relative; /* Position relative for absolute positioning of buttons */
+  padding: 50px;
+  background-color: white;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.action-button {
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+}
+
+.action-button i {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+.size-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #333; /* Adjust text color as needed */
+}
+/* Media Query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .tab-container {
+    width: 80%; /* Adjust width for smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .tab-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
   }
 }
