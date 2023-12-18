@@ -248,9 +248,18 @@ function App() {
 
   return (
     <div className="app">
-      <div className="hero-section">
-        <h1>Welcome to My Web App</h1>
-        <p>This is the hero section of the web app.</p>
+
+            <div className="hero-section">
+        <div className="hero-text">
+          <h1>Welcome to My Web App</h1>
+          <p>This is the hero section of the web app.</p>
+        </div>
+        <div className="hero-image">
+          <img
+            src="https://placekitten.com/400/300" // Replace with your image URL
+            alt="Hero Image"
+          />
+        </div>
       </div>
 
       <div className="tab-container">

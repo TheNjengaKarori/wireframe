@@ -16,11 +16,37 @@ body {
   min-height: 100vh;
 }
 
+.topnav {
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.logo {
+  margin-right: 1000px; /* Adjust the margin as needed */
+}
+
+.logo img {
+  height: 50px; /* Adjust the height of the logo as needed */
+}
+
 .hero-section {
-  text-align: center;
-  padding: 50px;
-  background-color: inherit; /* Inherit background color from the body */
-  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.hero-text {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.hero-text h1 {
+  margin-bottom: 10px;
+}
+
+.hero-image {
+  width: 40%; /* Adjust the width as needed */
 }
 
 .tab-container {
@@ -127,18 +153,40 @@ footer p {
   .tab-button {
     padding: 8px 16px; /* Adjust padding for smaller screens */
   }
+
 }
 
 /* Media Query for Tablets */
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+
 }
 
 /* Media Query for Phones */
 @media (max-width: 480px) {
   .grid-container {
     grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 10px;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
   }
 }
